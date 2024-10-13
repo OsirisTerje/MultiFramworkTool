@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net8.0;net6.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>MultiFrameworkTool</PackageId>
+    <ToolCommandName>multiframework-tool</ToolCommandName>
+    <Authors>YourName</Authors>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>MultiFramework Tool</Title>
+    <Description>A .NET tool supporting both .NET 6 and .NET 8 frameworks.</Description>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+  <None Update="$(OutputPath)$(AssemblyName).runtimeconfig.json">
+    <Pack>true</Pack>
+    <PackagePath>lib/$(TargetFramework)/</PackagePath>
+  </None>
+</ItemGroup>
+
+
+</Project>
