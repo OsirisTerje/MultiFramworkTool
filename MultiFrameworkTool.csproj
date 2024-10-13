@@ -4,10 +4,12 @@
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net8.0;net6.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackAsTool>true</PackAsTool>
     <PackageId>MultiFrameworkTool</PackageId>
-    <ToolCommandName>multiframework-tool</ToolCommandName>
-    <Authors>YourName</Authors>
-    <PackageVersion>1.0.0</PackageVersion>
+    <IsPackable>true</IsPackable>
+    <ToolCommandName>dotnet-multiframeworktool</ToolCommandName>
+    <Authors>Terje Sandstrom</Authors>
+    <PackageVersion>1.0.5</PackageVersion>
     <Title>MultiFramework Tool</Title>
     <Description>A .NET tool supporting both .NET 6 and .NET 8 frameworks.</Description>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -19,6 +21,14 @@
     <Pack>true</Pack>
     <PackagePath>lib/$(TargetFramework)/</PackagePath>
   </None>
+</ItemGroup>
+
+<PropertyGroup>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+</PropertyGroup>
+
+<ItemGroup>
+    <None Include="LICENSE" Pack="true" PackagePath=""/>
 </ItemGroup>
 
 
